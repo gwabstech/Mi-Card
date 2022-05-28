@@ -9,32 +9,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        /*
-        appBar: AppBar(
-          title: Text('My Card'),
-          backgroundColor: Colors.blueGrey,
-          foregroundColor: Colors.orangeAccent,
-          centerTitle: true,
-        ),
-        
-
-         */
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
-          children: <Widget>[
-            const SizedBox(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[
+            SizedBox(
               height: 10.0,
             ),
-            const CircleAvatar(
+            CircleAvatar(
               radius: 50.0,
               backgroundColor: Colors.yellow,
               backgroundImage: AssetImage('images/meeee.jpg'),
             ),
-            const SizedBox(
+            SizedBox(
               height: 10.0,
             ),
-            const Text(
+            Text(
               'ABUBAKAR ABDULLAHI GWABARE',
               style: TextStyle(
                 fontSize: 15,
@@ -45,10 +36,10 @@ class MyApp extends StatelessWidget {
                 letterSpacing: 1.5,
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 10.0,
             ),
-            const Text(
+            Text(
               'MOBILE APP DEVELOPER',
               style: TextStyle(
                 fontSize: 15,
@@ -59,58 +50,44 @@ class MyApp extends StatelessWidget {
                 wordSpacing: 1.5,
               ),
             ),
-            Container(
+            Card(
               color: Colors.white,
-              padding: const EdgeInsets.all(10.0),
-              margin:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Row(
-                children: const <Widget>[
-                  Icon(
-                    Icons.phone,
-                    size: 30,
-                    color: Colors.green,
-                  ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
-                    '+2349030863146',
-                    style: TextStyle(
-                        color: Colors.teal,
-                        fontFamily: 'Koulen',
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5),
-                  )
-                ],
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  size: 30,
+                  color: Colors.green,
+                ),
+                title: Text(
+                  '+2349030863146',
+                  style: TextStyle(
+                      color: Colors.teal,
+                      fontFamily: 'Koulen',
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.5),
+                ),
               ),
             ),
-            Container(
+            Card(
               color: Colors.white,
-              padding: const EdgeInsets.all(10.0),
-              margin:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Row(
-                children: const <Widget>[
-                  Icon(
-                    Icons.email,
-                    size: 30,
-                    color: Colors.green,
-                  ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
-                    'Gwabstech@gmail.com',
-                    style: TextStyle(
-                        color: Colors.teal,
-                        fontFamily: 'Koulen',
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5),
-                  )
-                ],
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  size: 30,
+                  color: Colors.green,
+                ),
+                title: Text(
+                  'Gwabstech@gmail.com',
+                  style: TextStyle(
+                      color: Colors.teal,
+                      fontFamily: 'Koulen',
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.5),
+                ),
               ),
             )
           ],
